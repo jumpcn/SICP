@@ -11,8 +11,8 @@
   (accumulate (lambda (this-coeff higher-terms)
                 (+ this-coeff
                    (* x
-                      (horner-eval x (cdr co-seq))
-                      )))
+                      higher-terms)
+                      ))
                0
                co-seq))
 
