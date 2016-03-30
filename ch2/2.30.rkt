@@ -3,11 +3,6 @@
 (define (square x)
   (* x x))
 
-(define (map op items)
-  (if null? items)
-  null
-  (cons (op (car items))
-        (map op (cdr items))))
 
 (define (square-tree tree)
   (cond
@@ -20,3 +15,4 @@
             (square-tree (cdr tree))))))
 
 (square-tree (list 1 2 3 (list 2 3 4)))
+
