@@ -17,7 +17,7 @@
     (if (verify_password pass)
         (cond ((eq? m 'withdraw) withdraw)
               ((eq? m 'deposit) deposit)
-              (else (error "Unknow request: MAKE-ACCOUNT")))
+              (else (error "Unknow request: MAKE-ACCOUNT" m)))
         (display "wrong password")))
                        
     dispatch)
